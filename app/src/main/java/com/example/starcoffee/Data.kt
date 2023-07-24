@@ -12,7 +12,7 @@ import com.example.starcoffee.drink.coffee.coffeeLatte
 import com.example.starcoffee.drink.coffee.macchiato
 
 val ade0 = Ade()
-val ade1 = CoolLimeFizzio()
+val ade1= CoolLimeFizzio()
 val ade2 = GrapeFruitAde()
 val ade3 = LemonAde()
 val ade4 = YujaPassionFizzio()

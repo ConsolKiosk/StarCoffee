@@ -9,13 +9,17 @@ class Money() {
        return translatedMoney
     }
 }
-class Calculate() {
-    var productList = mutableListOf<Double>()
-    var productListSum = productList.sum()
-    fun currentSum() {
-        println("총 결제 가격은 ${productListSum}원 입니다.")
-        }
-    }
+
+var productPriceList = mutableListOf<Double>()
+var productList = mutableListOf<String>()
+
+//class Calculate() {
+//    var productList = mutableListOf<Double>()
+//    var productListSum = productList.sum()
+//    fun currentSum() {
+//        println("총 결제 가격은 ${productListSum}원 입니다.")
+//        }
+//    }
 
 
 
