@@ -1,23 +1,16 @@
 package com.example.starcoffee
 
-import com.example.starcoffee.drink.ade.Ade
-
-
 fun main() {
-    var mainpage = MainPage()
+    val mainpage = MainPage()
     mainpage.mainPage()
-
 
 //    val money = Money()
 //    println(money.translate(3.5))
 //    println(money.currentMoney)
-
-
 }
 class MainPage() {
-
     fun mainPage(){
-        var adepage = AdePage()
+        val adepage = AdePage()
 
         println("[ STARCOFFEE MENU ]")
         println("1. Ade            ｜ ${ade0.displayInfo()}")
@@ -32,22 +25,14 @@ class MainPage() {
                 "1" -> adepage.adePage()
                 "0" -> {println("종료되었습니다!!")
                     break}
-
             }
         }
-
-        }
+    }
 }
 
-
-
-
-
 class AdePage() {
-
-
     fun adePage() {
-        var mainpage = MainPage()
+        val mainpage = MainPage()
 
         println("[ Ade MENU ]")
         for ((index, i) in adeList.withIndex()) {
@@ -55,12 +40,12 @@ class AdePage() {
         }
             println("0. 뒤로 가기 ｜ 뒤로 가기")
             println("메뉴를 골라 입력해주세요")
-            var adePageButton = readLine()
-            when (adePageButton) {
+        while (true) {
+            when (readLine()) {
                 "0" -> mainpage.mainPage()
+
             }
-
-
+        }
     }
 }
 
