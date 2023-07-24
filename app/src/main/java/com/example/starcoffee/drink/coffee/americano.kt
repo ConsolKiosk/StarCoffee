@@ -1,7 +1,12 @@
 package com.example.starcoffee.drink.coffee
 
-class americano:coffee() {
+class Americano:coffee() {
     val name:String = "아메리카노"
-    val price:Double = 4500.0
+    val price:Double = 4.5
+    fun displayInfo(){
+        println("1.${name} : ${price}")
+
+
+    }
 
 }
