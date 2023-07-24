@@ -3,7 +3,6 @@ package com.example.starcoffee.drink
 interface Drink {
     var category: String
 
-
     open fun sizeFunction(): String {
         println("사이즈를 선택해주세요. (T:톨, G:그란데, V:벤티)")
         while(true) {
