@@ -47,7 +47,7 @@ class AdePage() {
                 "0" -> mainpage.mainPage()
                 "1" -> {productPriceList.add(ade1.price)
                 productList.add(ade1.name)
-                println("${ade1.name}(을/를) W ${ade1.price}에 구매하였습니다!!")
+                println("${ade1.name}(을/를) ${ade1.price}에 구매하였습니다!!")
                     mainpage.mainPage()}
 
 
