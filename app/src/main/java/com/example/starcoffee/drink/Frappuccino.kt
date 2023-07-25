@@ -1,4 +1,4 @@
-package com.example.starcoffee.drink
+package com.example.starcoffee.Drink
 
 open class Frappuccino: Drink() {
     override var category: String = "프라푸치노"
