@@ -25,7 +25,7 @@ class AdePage() {
 //    //            }  이 라인 밑으로 잘 동작되면 when문은 나중에 지우기
 //        }
 
-        var commandNumber: Int = readLine()!!.toInt()
+        var commandNumber: Int? = (readLine() ?: "입력 값 오류").trim()?.toInt()
         if (commandNumber == 0 ) {turnDrinkpage.drinkPage()}
         else if (commandNumber == null) {
             println("null 입력이 되었습니다.")}     //
