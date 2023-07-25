@@ -2,8 +2,8 @@ package com.example.starcoffee.page
 
 class DrinkPage() {
     fun drinkPage() {
-        val mainpage = MainPage()
-        val adeapge = AdePage()
+        val turnMainpage = MainPage()
+        val turnAdepage = AdePage()
 
         println("[ Drink MENU ]")
         for ((index, i) in drinkList.withIndex()) {
@@ -13,8 +13,8 @@ class DrinkPage() {
         println("메뉴를 골라 입력해주세요")
         while (true) {
             when (readLine()) {
-                "0" -> mainpage.mainPage()
-                "1" -> adeapge.adePage()
+                "0" -> turnMainpage.mainPage()
+                "1" -> turnAdepage.adePage()
 
 
             }

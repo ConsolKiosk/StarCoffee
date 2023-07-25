@@ -4,7 +4,7 @@ package com.example.starcoffee.page
 
 class MainPage() {
     fun mainPage(){
-        val drinkpage= DrinkPage()
+        val turnDrinkpage= DrinkPage()
 
         println("[ STARCOFFEE MENU ]")
         println("1. Drink            ｜")
@@ -16,7 +16,7 @@ class MainPage() {
         println("메뉴를 골라 입력해주세요")
         while (true) {
             when (readLine()) {
-                "1" -> drinkpage.drinkPage()
+                "1" -> turnDrinkpage.drinkPage()
                 "0" -> {println("종료되었습니다!!")
                     break}
             }

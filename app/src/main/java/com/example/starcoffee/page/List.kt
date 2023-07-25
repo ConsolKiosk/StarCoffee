@@ -22,12 +22,12 @@ import com.example.starcoffee.drink.SPLatte
 import com.example.starcoffee.drink.YujaAde
 import com.example.starcoffee.drink.chocoLatte
 
-var productPriceList = mutableListOf<Double>()
-var productList = mutableListOf<String>()
+var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
+var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
 
 
 
-val ade0 = Ade()
+val ade0 = Ade() // 드링크 리스트 시작
 val ade1= GrapeFruitAde()
 val ade2 = LemonAde()
 val ade3 = LimeAde()
@@ -55,7 +55,11 @@ val noncoffee3 = SPLatte()
 val noncoffee4 = SDYBlended()
 var noncoffeeList = mutableListOf(noncoffee1,noncoffee2,noncoffee3,noncoffee4)
 
-var drinkList = mutableListOf(ade0, coffee0, frappuccino0, noncoffee0) // 드링크 리스트
+var drinkList = mutableListOf(ade0, coffee0, frappuccino0, noncoffee0) // 드링크 리스트 완료
+
+
+
+
 
 
 
