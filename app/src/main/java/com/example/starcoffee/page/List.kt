@@ -21,6 +21,9 @@ import com.example.starcoffee.drink.SPLatte
 import com.example.starcoffee.drink.YujaAde
 import com.example.starcoffee.drink.chocoLatte
 
+var productPriceList = mutableListOf<Double>()
+var productList = mutableListOf<String>()
+
 val ade0 = Ade()
 val ade1= GrapeFruitAde()
 val ade2 = LemonAde()

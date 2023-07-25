@@ -20,8 +20,7 @@ class Money() {
     }
 }
 
-var productPriceList = mutableListOf<Double>()
-var productList = mutableListOf<String>()
+
 
 //class Calculate() {
 //    var productList = mutableListOf<Double>()
