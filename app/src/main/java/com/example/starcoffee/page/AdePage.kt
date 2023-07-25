@@ -25,14 +25,13 @@ class AdePage() {
 //    //            }  이 라인 밑으로 잘 동작되면 when문은 나중에 지우기
 //        }
 
-        var commandNumber: Int? = (readLine() ?: "입력 값 오류").trim()?.toInt()
+        val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
         if (commandNumber == 0 ) {turnDrinkpage.drinkPage()}
-        else if (commandNumber == null) {
-            println("null 입력이 되었습니다.")}     //
+        else if (commandNumber > adeList.size) {turnDrinkpage.drinkPage()}
         else {
-            productList.add(adeList[commandNumber + 1].name)
-            productPriceList.add(adeList[commandNumber + 1].price)
-            println("${adeList[commandNumber + 1].name}(을/를) W ${adeList[commandNumber + 1].price}에 구매하였습니다!!")
+            productList.add(adeList[commandNumber - 1].name)
+            productPriceList.add(adeList[commandNumber - 1].price)
+            println("${adeList[commandNumber - 1].name}(을/를) W ${adeList[commandNumber - 1].price}에 구매하였습니다!!")
             println("메인 페이지로 돌아갑니다.")
             mainpage.mainPage()
 
