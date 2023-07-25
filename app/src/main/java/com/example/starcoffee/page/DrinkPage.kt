@@ -21,7 +21,7 @@ class DrinkPage() {
 
             when (commandNumber) {
                 999 -> {
-                    println("다시 입력해주세요")
+                    println("다시 입력해주세요!")
                     continue}
                 1 -> turnAdepage.adePage()
                 2 -> turnCoffeePage.coffeePage()

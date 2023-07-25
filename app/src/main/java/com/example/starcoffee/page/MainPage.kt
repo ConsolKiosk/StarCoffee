@@ -21,9 +21,8 @@ class MainPage() {
 
             when (commandNumber) {
                 999 -> {
-                    println("다시 입력해주세요")
+                    println("다시 입력해주세요!")
                     continue}
-
                 1 -> turnDrinkpage.drinkPage()
 //                2 ->
 //                3 ->
