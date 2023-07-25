@@ -1,6 +1,6 @@
 package com.example.starcoffee.Drink
 
-open class NonCoffee {
+open class NonCoffee:Drink() {
     override var category: String = "NonCoffee"
 }
 class chocoLatte:NonCoffee () {

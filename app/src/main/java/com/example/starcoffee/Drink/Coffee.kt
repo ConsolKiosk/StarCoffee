@@ -2,7 +2,7 @@ package com.example.starcoffee.Drink
 
 
 
-open class Coffee {
+open class Coffee:Drink() {
     override var category: String = "Coffee"
 }
 
