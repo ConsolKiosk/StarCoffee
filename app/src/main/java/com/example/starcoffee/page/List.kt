@@ -25,7 +25,12 @@ import com.example.starcoffee.drink.chocoLatte
 var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
 var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
 
-
+class Calculate() {
+    var productPriceListSum = productPriceList.sum()
+    fun currentSum() {
+        println("현재까지 총 결제 가격은 W ${productPriceListSum} 입니다.")
+    }
+}
 
 val ade0 = Ade() // 드링크 리스트 시작
 val ade1= GrapeFruitAde()

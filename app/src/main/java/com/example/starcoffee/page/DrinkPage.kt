@@ -17,9 +17,12 @@ class DrinkPage() {
         println("0. 뒤로 가기 ｜ 뒤로 가기")
         println("메뉴를 골라 입력해주세요")
         while (true) {
-            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: { main() }
+            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
 
             when (commandNumber) {
+                999 -> {
+                    println("다시 입력해주세요")
+                    continue}
                 1 -> turnAdepage.adePage()
                 2 -> turnCoffeePage.coffeePage()
                 3 -> turnFrappuccinoPage.frappuccinoPage()
