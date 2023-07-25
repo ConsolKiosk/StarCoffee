@@ -33,6 +33,7 @@ class AdePage() {
             productPriceList.add(adeList[commandNumber - 1].price)
             println("${adeList[commandNumber - 1].name}(을/를) W ${adeList[commandNumber - 1].price}에 구매하였습니다!!")
             println("메인 페이지로 돌아갑니다.")
+            println("현재 구매 내역 ${productList}")
             mainpage.mainPage()
 
         }
