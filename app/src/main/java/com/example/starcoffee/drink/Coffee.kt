@@ -1,4 +1,4 @@
-package com.example.starcoffee.Drink
+package com.example.starcoffee.drink
 
 //11
 
