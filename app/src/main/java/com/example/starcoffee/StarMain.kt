@@ -38,7 +38,7 @@ class AdePage() {
 
         println("[ Ade MENU ]")
         for ((index, i) in adeList.withIndex()) {
-            println("${index + 1}. ${i.name} ｜ W ${i.price} ｜ ${i.displayInfo()}")
+            println("${index + 1}. ${i.name} \t｜ W ${i.price} ｜ ${i.displayInfo()}")
         }
             println("0. 뒤로 가기 ｜ 뒤로 가기")
             println("메뉴를 골라 입력해주세요")
