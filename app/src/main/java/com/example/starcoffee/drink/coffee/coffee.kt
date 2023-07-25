@@ -1,14 +1,18 @@
 package com.example.starcoffee.drink.coffee
 
-fun main(){
-    var test = americano()
-
-    test.displayInfo()
-
-}
+//fun main(){
+//    var test = americano()
+//
+//    test.displayInfo()
+//
+//}
 open class coffee {
     var size:String =""
     var IceOrHot:String = ""
+
+    open fun displayInfo ():String {
+        return "커피 디스플레이 인포"
+    }
 
 
 
