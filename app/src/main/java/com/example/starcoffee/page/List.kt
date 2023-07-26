@@ -36,6 +36,27 @@ import com.example.starcoffee.food.ESSandwich
 import com.example.starcoffee.food.LemonCake
 import com.example.starcoffee.food.PotatoSandwich
 import com.example.starcoffee.food.Sandwich
+import com.example.starcoffee.md.Accessories
+import com.example.starcoffee.md.BDMug
+import com.example.starcoffee.md.CCTumbler
+import com.example.starcoffee.md.CSMug
+import com.example.starcoffee.md.Colombia
+import com.example.starcoffee.md.GCTumbler
+import com.example.starcoffee.md.GSMug
+import com.example.starcoffee.md.House
+import com.example.starcoffee.md.ItalianRoast
+import com.example.starcoffee.md.MBTumbler
+import com.example.starcoffee.md.MSMTumbler
+import com.example.starcoffee.md.Mug
+import com.example.starcoffee.md.PikePlaceRoast
+import com.example.starcoffee.md.SCCoffeeScoop
+import com.example.starcoffee.md.SCPress
+import com.example.starcoffee.md.SGlassContainer
+import com.example.starcoffee.md.SLeverDripper
+import com.example.starcoffee.md.Tumbler
+import com.example.starcoffee.md.Via
+import com.example.starcoffee.md.WMMug
+
 
 var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
 var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
@@ -98,7 +119,40 @@ val sandwich3 = BELTSandwich()
 val sandwich4 = CCSSandwich()
 var sandwichList = mutableListOf(sandwich1, sandwich2, sandwich3, sandwich4)
 
-var foodList = mutableListOf(bread0, cake0, sandwich0)
+var foodList = mutableListOf(bread0, cake0, sandwich0) // food list end
+
+val accessories0 = Accessories() // accessories list start
+val accessories1 = SCCoffeeScoop()
+val accessories2 = SCPress()
+val accessories3 = SGlassContainer()
+val accessories4 = SLeverDripper()
+var accessoriesList = mutableListOf(accessories1, accessories2, accessories3, accessories4)
+
+val mug0 = Mug()
+val mug1 = BDMug()
+val mug2 = CSMug()
+val mug3 = GSMug()
+val mug4 = WMMug()
+var mugList = mutableListOf(mug1, mug2, mug3, mug4)
+
+val tumbler0 = Tumbler()
+val tumbler1 = CCTumbler()
+val tumbler2 = GCTumbler()
+val tumbler3 = MBTumbler()
+val tumbler4 = MSMTumbler()
+var tumblerList = mutableListOf(tumbler1, tumbler2, tumbler3, tumbler4)
+
+val via0 = Via()
+val via1 = Colombia()
+val via2 = House()
+val via3 = ItalianRoast()
+val via4 = PikePlaceRoast()
+var viaList = mutableListOf(via1, via2, via3, via4)
+
+var mdList = mutableListOf(accessories0, mug0, tumbler0, via0) // accessories list end
+
+
+
 
 
 
