@@ -37,14 +37,14 @@ import com.example.starcoffee.food.PotatoSandwich
 import com.example.starcoffee.food.Sandwich
 import com.example.starcoffee.product.Accessories
 import com.example.starcoffee.product.BDMug
-import com.example.starcoffee.product.CCTumbler
+import com.example.starcoffee.product.CQTumbler
 import com.example.starcoffee.product.CSMug
 import com.example.starcoffee.product.Colombia
-import com.example.starcoffee.product.GCTumbler
+import com.example.starcoffee.product.GQTumbler
 import com.example.starcoffee.product.GSMug
 import com.example.starcoffee.product.House
 import com.example.starcoffee.product.ItalianRoast
-import com.example.starcoffee.product.MBTumbler
+import com.example.starcoffee.product.EBTumbler
 import com.example.starcoffee.product.MSMTumbler
 import com.example.starcoffee.product.Mug
 import com.example.starcoffee.product.PikePlaceRoast
@@ -142,9 +142,9 @@ val mug4 = WMMug()
 var mugList = mutableListOf(mug1, mug2, mug3, mug4)
 
 val tumbler0 = Tumbler()
-val tumbler1 = CCTumbler()
-val tumbler2 = GCTumbler()
-val tumbler3 = MBTumbler()
+val tumbler1 = CQTumbler()
+val tumbler2 = GQTumbler()
+val tumbler3 = EBTumbler()
 val tumbler4 = MSMTumbler()
 var tumblerList = mutableListOf(tumbler1, tumbler2, tumbler3, tumbler4)
 
