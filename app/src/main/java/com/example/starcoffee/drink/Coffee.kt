@@ -1,6 +1,6 @@
 package com.example.starcoffee.drink
 
-//11
+//1
 
 open class Coffee:Drink() {
     override var category: String = "Coffee"
