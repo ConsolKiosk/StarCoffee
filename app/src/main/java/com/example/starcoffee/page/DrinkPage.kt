@@ -33,7 +33,7 @@ class DrinkPage() {
             println("${index + 1}. ${i.name} ｜ W ${i.price} ｜ ")
         }
         println("0. 뒤로 가기 ｜ 뒤로 가기")
-        println("메뉴를 골라 입력해주세요1")
+        println("메뉴를 골라 입력해주세요")
 
         while(true) {
             val drinkNum = readLine()?.trim()?.toIntOrNull() ?: 999
@@ -76,7 +76,7 @@ class DrinkPage() {
             println("${index + 1}. ${i.name} ｜ W ${i.price} ｜ ")
         }
         println("0. 뒤로 가기 ｜ 뒤로 가기")
-        println("메뉴를 골라 입력해주세요1")
+        println("메뉴를 골라 입력해주세요")
 
         while(true) {
             val drinkNum = readLine()?.trim()?.toIntOrNull() ?: 999
@@ -137,8 +137,7 @@ class DrinkPage() {
                 break
             }else if(commandNumber == 3){
                 println("Venti 사이즈를 선택하셨습니다. 가격이 1000원 추가 됩니다.")
-                testname = name.trimEnd() + "_1" +
-                        "Venti_Size" //name 재지정
+                testname = name.trimEnd() + "_Venti_Size" //name 재지정
                 Price = Price + 1.0
                 break
             }else{
