@@ -10,7 +10,7 @@ class OrderPage {
             println("${key}\t\t | W ${value} |")
             totalOrder += value
         }
-        println("\n[ Total ]\nW ${totalOrder}")
+        println("[ Total ]\nW ${totalOrder}")
 
         while(true) {
             println("1. 주문, 2. 메뉴판")

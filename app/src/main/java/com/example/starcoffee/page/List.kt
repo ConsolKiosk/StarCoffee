@@ -56,17 +56,7 @@ import com.example.starcoffee.product.Tumbler
 import com.example.starcoffee.product.Via
 import com.example.starcoffee.product.WMMug
 
-//var orderLists: MutableList<LinkedHashMap<String, Double>> = ArrayList()
-//var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
-//var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
 var orderLists: MutableMap<String, Double> = mutableMapOf()
-
-//class Calculate() {
-//    var productPriceListSum = productPriceList.sum()
-//    fun currentSum() {
-//        println("현재까지 총 결제 가격은 W ${productPriceListSum} 입니다.")
-//    }
-//}
 
 var initAmount = 10.0 //초기 금액
 var balanceAmount: Double = initAmount //잔액
@@ -127,13 +117,6 @@ var sandwichList = mutableListOf(sandwich1, sandwich2, sandwich3, sandwich4)
 var foodList = mutableListOf(bread0, cake0, sandwich0) // food list end
 
 //Product
-val accessories0 = Accessories() // accessories list start
-val accessories1 = SCCoffeeScoop()
-val accessories2 = SCPress()
-val accessories3 = SGlassContainer()
-val accessories4 = SLeverDripper()
-var accessoriesList = mutableListOf(accessories1, accessories2, accessories3, accessories4)
-
 val mug0 = Mug()
 val mug1 = BDMug()
 val mug2 = CSMug()
@@ -154,6 +137,13 @@ val via2 = House()
 val via3 = ItalianRoast()
 val via4 = PikePlaceRoast()
 var viaList = mutableListOf(via1, via2, via3, via4)
+
+val accessories0 = Accessories() // accessories list start
+val accessories1 = SCCoffeeScoop()
+val accessories2 = SCPress()
+val accessories3 = SGlassContainer()
+val accessories4 = SLeverDripper()
+var accessoriesList = mutableListOf(accessories1, accessories2, accessories3, accessories4)
 
 var mdList = mutableListOf(mug0, tumbler0, via0, accessories0) // accessories list end
 
