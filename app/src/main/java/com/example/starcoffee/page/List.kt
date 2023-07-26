@@ -6,7 +6,6 @@ import com.example.starcoffee.drink.Cappuccino
 import com.example.starcoffee.drink.CaramelFrappuccino
 import com.example.starcoffee.drink.Coffee
 import com.example.starcoffee.drink.CoffeeLatte
-import com.example.starcoffee.drink.Drink
 import com.example.starcoffee.drink.EspressoFrappuccino
 import com.example.starcoffee.drink.Frappuccino
 import com.example.starcoffee.drink.GrapeFruitAde
@@ -36,26 +35,26 @@ import com.example.starcoffee.food.ESSandwich
 import com.example.starcoffee.food.LemonCake
 import com.example.starcoffee.food.PotatoSandwich
 import com.example.starcoffee.food.Sandwich
-import com.example.starcoffee.md.Accessories
-import com.example.starcoffee.md.BDMug
-import com.example.starcoffee.md.CCTumbler
-import com.example.starcoffee.md.CSMug
-import com.example.starcoffee.md.Colombia
-import com.example.starcoffee.md.GCTumbler
-import com.example.starcoffee.md.GSMug
-import com.example.starcoffee.md.House
-import com.example.starcoffee.md.ItalianRoast
-import com.example.starcoffee.md.MBTumbler
-import com.example.starcoffee.md.MSMTumbler
-import com.example.starcoffee.md.Mug
-import com.example.starcoffee.md.PikePlaceRoast
-import com.example.starcoffee.md.SCCoffeeScoop
-import com.example.starcoffee.md.SCPress
-import com.example.starcoffee.md.SGlassContainer
-import com.example.starcoffee.md.SLeverDripper
-import com.example.starcoffee.md.Tumbler
-import com.example.starcoffee.md.Via
-import com.example.starcoffee.md.WMMug
+import com.example.starcoffee.product.Accessories
+import com.example.starcoffee.product.BDMug
+import com.example.starcoffee.product.CCTumbler
+import com.example.starcoffee.product.CSMug
+import com.example.starcoffee.product.Colombia
+import com.example.starcoffee.product.GCTumbler
+import com.example.starcoffee.product.GSMug
+import com.example.starcoffee.product.House
+import com.example.starcoffee.product.ItalianRoast
+import com.example.starcoffee.product.MBTumbler
+import com.example.starcoffee.product.MSMTumbler
+import com.example.starcoffee.product.Mug
+import com.example.starcoffee.product.PikePlaceRoast
+import com.example.starcoffee.product.SCCoffeeScoop
+import com.example.starcoffee.product.SCPress
+import com.example.starcoffee.product.SGlassContainer
+import com.example.starcoffee.product.SLeverDripper
+import com.example.starcoffee.product.Tumbler
+import com.example.starcoffee.product.Via
+import com.example.starcoffee.product.WMMug
 
 
 var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트

@@ -1,4 +1,4 @@
-package com.example.starcoffee.md
+package com.example.starcoffee.product
 
 open class Tumbler : MD() {
     override var category: String = "Tumbler"
