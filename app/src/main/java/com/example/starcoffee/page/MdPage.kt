@@ -1,15 +1,12 @@
 package com.example.starcoffee.page
 
-import com.example.starcoffee.main
-
-class DrinkPage() {
-
-    fun drinkPage() {
+class MdPage {
+    fun mdPage() {
         val turnMainpage = MainPage()
 
 
-        println("[ Drink MENU ]")
-        for ((index, i) in drinkList.withIndex()) {
+        println("[ MD MENU ]")
+        for ((index, i) in mdList.withIndex()) {
             println("${index + 1}. ${i.category}")
         }
         println("0. 뒤로 가기 ｜ 뒤로 가기")
@@ -21,20 +18,20 @@ class DrinkPage() {
                 999 -> {
                     println("다시 입력해주세요!")
                     continue}
-                1 -> drinkChoicePage(0)
-                2 -> drinkChoicePage(1)
-                3 -> drinkChoicePage(2)
-                4 -> drinkChoicePage(3)
+                1 -> mdChoicePage(0)
+                2 -> mdChoicePage(1)
+                3 -> mdChoicePage(2)
+                4 -> mdChoicePage(3)
                 0 -> turnMainpage.mainPage()
 
             }
         }
     } // fun drinkPage()
-    fun drinkChoicePage(k : Int) {
-        var choiceList = mutableListOf(adeList, coffeeList, frappuccinoList, noncoffeeList)
+    fun mdChoicePage(k : Int) {
+        var choiceList = mutableListOf(accessoriesList, mugList, tumblerList, viaList)
 
         val mainpage = MainPage()
-        val turnDrinkpage = DrinkPage()
+        val turnMdpage = MdPage()
 
         println("[ ${choiceList[k][0].category} MENU ]")
         for ((index, i) in choiceList[k].withIndex()) {
@@ -43,8 +40,8 @@ class DrinkPage() {
         println("0. 뒤로 가기 ｜ 뒤로 가기")
         println("메뉴를 골라 입력해주세요")
         val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
-        if (commandNumber == 0 ) {turnDrinkpage.drinkPage()}
-        else if (commandNumber > choiceList[k].size) {turnDrinkpage.drinkPage()}
+        if (commandNumber == 0 ) {turnMdpage.mdPage()}
+        else if (commandNumber > choiceList[k].size) {turnMdpage.mdPage()}
         else {
             productList.add(choiceList[k][commandNumber - 1].name)
             productPriceList.add(choiceList[k][commandNumber - 1].price)

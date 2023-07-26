@@ -1,4 +1,4 @@
-package com.example.starcoffee.md
+package com.example.starcoffee.product
 
 import com.example.starcoffee.StarMenu
 
