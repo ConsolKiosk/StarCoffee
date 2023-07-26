@@ -58,7 +58,7 @@ import com.example.starcoffee.product.WMMug
 
 var orderLists: MutableMap<String, Double> = mutableMapOf()
 
-var initAmount = 10.0 //초기 금액
+var initAmount = 100.0 //초기 금액
 var balanceAmount: Double = initAmount //잔액
 
 //Drink
@@ -147,7 +147,7 @@ var accessoriesList = mutableListOf(accessories1, accessories2, accessories3, ac
 
 var mdList = mutableListOf(mug0, tumbler0, via0, accessories0) // accessories list end
 
-
+var customers :Int = 0
 
 
 

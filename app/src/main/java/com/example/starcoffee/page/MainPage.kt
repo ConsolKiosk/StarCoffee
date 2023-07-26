@@ -1,12 +1,27 @@
 package com.example.starcoffee.page
+
+import android.os.Build
+import androidx.annotation.RequiresApi
+
 class MainPage() {
+
+
+
+    fun changeCustomer(newCustomer: Int) {
+        customers = newCustomer
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
     fun mainPage(){
         val turnDrinkpage= DrinkPage()
         val turnFoodpage = FoodPage()
         val turnProductpage = ProductPage()
         val turnOrderpage = OrderPage()
 
+
+
         while (true) {
+
             println("★★★★★★★★★★★★★★★★★")
             println("STARCOFFEE 에 오신걸 환영합니다.")
             println("★★★★★★★★★★★★★★★★★")
@@ -24,7 +39,7 @@ class MainPage() {
                 1 -> turnDrinkpage.drinkPage()
                 2 -> turnFoodpage.foodPage()
                 3 -> turnProductpage.productPage()
-                0 -> turnOrderpage.orderPage()
+                0 -> turnOrderpage.orderPage(customers)
                 else -> println("메뉴를 다시 입력해주세요.")
             }
         }
