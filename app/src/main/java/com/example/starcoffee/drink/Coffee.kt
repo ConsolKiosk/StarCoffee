@@ -13,7 +13,7 @@ open class Coffee:Drink() {
             var inputnum1 = readLine()!!.toInt() //사용자 Input 받음
             if (inputnum1 == 1) { //아이스 선택시
                 println("아이스 ${name}를 선택하셨습니다.")
-                name = "아이스 " + name1 // 이름 변수 앞 아이스 추가
+                name = "아이스 " + name // 이름 변수 앞 아이스 추가
                 break
             } else if(inputnum1 == 2) { //핫 선택시
                 println("뜨거운 ${name}를 선택하셨습니다.")
