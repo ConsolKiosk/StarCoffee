@@ -56,17 +56,22 @@ import com.example.starcoffee.product.Tumbler
 import com.example.starcoffee.product.Via
 import com.example.starcoffee.product.WMMug
 
+//var orderLists: MutableList<LinkedHashMap<String, Double>> = ArrayList()
+//var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
+//var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
+var orderLists: MutableMap<String, Double> = mutableMapOf()
 
-var productPriceList = mutableListOf<Double>() // 구매한 물건 가격 리스트
-var productList = mutableListOf<String>() // 구매한 물건 이름 리스트
+//class Calculate() {
+//    var productPriceListSum = productPriceList.sum()
+//    fun currentSum() {
+//        println("현재까지 총 결제 가격은 W ${productPriceListSum} 입니다.")
+//    }
+//}
 
-class Calculate() {
-    var productPriceListSum = productPriceList.sum()
-    fun currentSum() {
-        println("현재까지 총 결제 가격은 W ${productPriceListSum} 입니다.")
-    }
-}
+var initAmount = 10.0 //초기 금액
+var balanceAmount: Double = initAmount //잔액
 
+//Drink
 val ade0 = Ade() // 드링크 리스트 시작
 val ade1= GrapeFruitAde()
 val ade2 = LemonAde()
@@ -95,8 +100,9 @@ val noncoffee3 = SPLatte()
 val noncoffee4 = SDYBlended()
 var noncoffeeList = mutableListOf(noncoffee1,noncoffee2,noncoffee3,noncoffee4)
 
-var drinkList = mutableListOf(ade0, coffee0, frappuccino0, noncoffee0) // 드링크 리스트 완료
+var drinkList = mutableListOf(coffee0, noncoffee0, frappuccino0, ade0) // 드링크 리스트 완료
 
+//Food
 val bread0 = Bread() // food list start
 val bread1 = Bagel()
 val bread2 = ApplePie()
@@ -120,6 +126,7 @@ var sandwichList = mutableListOf(sandwich1, sandwich2, sandwich3, sandwich4)
 
 var foodList = mutableListOf(bread0, cake0, sandwich0) // food list end
 
+//Product
 val accessories0 = Accessories() // accessories list start
 val accessories1 = SCCoffeeScoop()
 val accessories2 = SCPress()
@@ -148,7 +155,7 @@ val via3 = ItalianRoast()
 val via4 = PikePlaceRoast()
 var viaList = mutableListOf(via1, via2, via3, via4)
 
-var mdList = mutableListOf(accessories0, mug0, tumbler0, via0) // accessories list end
+var mdList = mutableListOf(mug0, tumbler0, via0, accessories0) // accessories list end
 
 
 
