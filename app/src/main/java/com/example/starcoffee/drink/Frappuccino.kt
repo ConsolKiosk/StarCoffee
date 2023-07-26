@@ -1,7 +1,7 @@
 package com.example.starcoffee.drink
 
 open class Frappuccino: Drink() {
-    override var category: String = "Frappuccino".padEnd(40)
+    override var category: String = "Frappuccino"
 }
 
 class JavaChipFrappuccino: Frappuccino() {

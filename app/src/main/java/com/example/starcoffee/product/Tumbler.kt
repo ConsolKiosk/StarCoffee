@@ -1,6 +1,6 @@
 package com.example.starcoffee.product
 
-open class Tumbler : MD() {
+open class Tumbler : Product() {
     override var category: String = "Tumbler"
 }
 

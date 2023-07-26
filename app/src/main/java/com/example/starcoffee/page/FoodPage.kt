@@ -6,8 +6,8 @@ class FoodPage {
         for ((index, i) in foodList.withIndex()) {
             println("${index + 1}. ${i.category}")
         }
-        println("0. 뒤로 가기 ｜ 뒤로 가기")
-        println("메뉴를 골라 입력해주세요")
+        println("0. 뒤로 가기")
+        println("아래 카테고리를 골라 입력해주세요")
         while (true) {
             val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
             when (commandNumber) {
@@ -16,7 +16,7 @@ class FoodPage {
                     return
                 }
                 0 -> return
-                else -> println("다시 입력해주세요!")
+                else -> println("카테고리를 다시 입력해주세요.")
             }
         }
     } //fun foodPage()
@@ -27,8 +27,8 @@ class FoodPage {
         for ((index, i) in choiceFoodList[k].withIndex()) {
             println("${index + 1}. ${i.name} ｜ W ${i.price} ｜ ")
         }
-        println("0. 뒤로 가기 ｜ 뒤로 가기")
-        println("메뉴를 골라 입력해주세요")
+        println("0. 뒤로 가기")
+        println("아래 항목을 골라 입력해주세요")
         while(true) {
             val foodNum = readLine()?.trim()?.toIntOrNull() ?: 999
             when(foodNum) {
@@ -42,19 +42,17 @@ class FoodPage {
                             1 -> {
                                 println("${choiceFoodList[k][foodNum - 1].name} 가 장바구니에 추가되었습니다.")
                                 orderLists.put(choiceFoodList[k][foodNum-1].name, choiceFoodList[k][foodNum-1].price)
-                                println("메인 페이지로 돌아갑니다.")
                                 return
                             }
                             2 -> {
-                                println("취소하셨습니다. 메인 페이지로 돌아갑니다.")
                                 return
                             }
                             else -> println("다시 입력해주세요.")
                         }
                     }
                 }
-                0 -> return
-                else -> println("다시 입력해주세요.")
+                0 -> return foodPage()
+                else -> println("항목을 다시 입력해주세요.")
             }
         }
     }
