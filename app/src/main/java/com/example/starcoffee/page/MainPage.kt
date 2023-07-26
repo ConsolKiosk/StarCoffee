@@ -7,6 +7,7 @@ class MainPage() {
     fun mainPage(){
         var calculate = Calculate()
         val turnDrinkpage= DrinkPage()
+        val turnFoodpage = FoodPage()
 
         println("[ STARCOFFEE MENU ]")
         println("1. Drink            ｜")
@@ -24,7 +25,7 @@ class MainPage() {
                     println("다시 입력해주세요!")
                     continue}
                 1 -> turnDrinkpage.drinkPage()
-//                2 ->
+                2 -> turnFoodpage.foodPage()
 //                3 ->
 //                4 ->
                 0 -> {println("종료되었습니다!!")

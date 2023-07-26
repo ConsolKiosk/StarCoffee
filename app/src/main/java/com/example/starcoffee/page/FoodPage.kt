@@ -1,15 +1,12 @@
 package com.example.starcoffee.page
 
-import com.example.starcoffee.main
-
-class DrinkPage() {
-
-    fun drinkPage() {
+class FoodPage {
+    fun foodPage() {
         val turnMainpage = MainPage()
 
 
-        println("[ Drink MENU ]")
-        for ((index, i) in drinkList.withIndex()) {
+        println("[ Food MENU ]")
+        for ((index, i) in foodList.withIndex()) {
             println("${index + 1}. ${i.category}")
         }
         println("0. 뒤로 가기 ｜ 뒤로 가기")
@@ -21,20 +18,20 @@ class DrinkPage() {
                 999 -> {
                     println("다시 입력해주세요!")
                     continue}
-                1 -> drinkChoicePage(0)
-                2 -> drinkChoicePage(1)
-                3 -> drinkChoicePage(2)
-                4 -> drinkChoicePage(3)
+                1 -> foodChoicePage(0)
+                2 -> foodChoicePage(1)
+                3 -> foodChoicePage(2)
+                4 -> foodChoicePage(3)
                 0 -> turnMainpage.mainPage()
 
             }
         }
     } // fun drinkPage()
-    fun drinkChoicePage(k : Int) {
-        var choiceList = mutableListOf(adeList, coffeeList, frappuccinoList, noncoffeeList)
+    fun foodChoicePage(k : Int) {
+        var choiceList = mutableListOf(breadList, cakeList, sandwichList)
 
         val mainpage = MainPage()
-        val turnDrinkpage = DrinkPage()
+        val turnFoodpage = FoodPage()
 
         println("[ ${choiceList[k][0].category} MENU ]")
         for ((index, i) in choiceList[k].withIndex()) {
@@ -43,8 +40,8 @@ class DrinkPage() {
         println("0. 뒤로 가기 ｜ 뒤로 가기")
         println("메뉴를 골라 입력해주세요")
         val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
-        if (commandNumber == 0 ) {turnDrinkpage.drinkPage()}
-        else if (commandNumber > choiceList[k].size) {turnDrinkpage.drinkPage()}
+        if (commandNumber == 0 ) {turnFoodpage.foodPage()}
+        else if (commandNumber > choiceList[k].size) {turnFoodpage.foodPage()}
         else {
             productList.add(choiceList[k][commandNumber - 1].name)
             productPriceList.add(choiceList[k][commandNumber - 1].price)
@@ -55,4 +52,5 @@ class DrinkPage() {
 
         }
     }
+
 }
