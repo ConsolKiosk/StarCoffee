@@ -5,18 +5,18 @@ open class Via : MD() {
 }
 
 class Colombia : Via() {
-    override var name: String = "Colombia"
+    override var name: String = "Colombia".padEnd(40)
     override var price: Double = 20.0
 }
 class House : Via() {
-    override var name: String = "House"
+    override var name: String = "House".padEnd(40)
     override var price: Double = 18.0
 }
 class ItalianRoast : Via() {
-    override var name: String = "ItalianRoast"
+    override var name: String = "ItalianRoast".padEnd(40)
     override var price: Double = 22.0
 }
 class PikePlaceRoast : Via() {
-    override var name: String = "PikePlaceRoast"
+    override var name: String = "PikePlaceRoast".padEnd(40)
     override var price: Double = 23.0
 }

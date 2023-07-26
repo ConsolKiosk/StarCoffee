@@ -4,22 +4,22 @@ open class Tumbler : MD() {
     override var category: String = "Tumbler"
 }
 
-class CCTumbler : Tumbler() {
-    override var name: String = "CCTumbler"
+class CQTumbler : Tumbler() {
+    override var name: String = "CreamQuencherTumbler".padEnd(40)
     override var price: Double = 19.0
 }
 
-class GCTumbler : Tumbler() {
-    override var name: String = "GCTumbler"
+class GQTumbler : Tumbler() {
+    override var name: String = "GreenQuencherTumbler".padEnd(40)
     override var price: Double = 18.0
 }
 
-class MBTumbler : Tumbler() {
-    override var name: String = "MBTumbler"
+class EBTumbler : Tumbler() {
+    override var name: String = "ElmaBlackTumbler".padEnd(40)
     override var price: Double = 25.0
 }
 
 class MSMTumbler : Tumbler() {
-    override var name: String = "MSMTumbler"
+    override var name: String = "MiirSirenMintTumbler".padEnd(40)
     override var price: Double = 22.0
 }
