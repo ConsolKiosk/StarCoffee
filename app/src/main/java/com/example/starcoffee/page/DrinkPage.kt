@@ -1,7 +1,10 @@
 package com.example.starcoffee.page
 
+
+
 class DrinkPage() {
     fun drinkPage() {
+1
         println("[ Drink MENU ]")
         for ((index, i) in drinkList.withIndex()) {
             println("${index + 1}. ${i.category}")

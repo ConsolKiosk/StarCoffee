@@ -2,6 +2,11 @@ package com.example.starcoffee.page
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.time.LocalTime
 
 
@@ -48,11 +53,21 @@ class OrderPage {
                         }
 
                         if(hour in 9..22){
+
                             balanceAmount -= totalOrder
                             println("주문이 완료되었습니다. 현재 잔액은 ${balanceAmount} 입니다.")
                             mainPage.changeCustomer(++setCustomer)
 
                             orderLists.clear()
+                            var threeSecondDelay = CoroutineScope(Dispatchers.Default).launch{
+                                delay(3000)
+
+                            }
+                            runBlocking {
+                                threeSecondDelay.join()
+                            }
+                            threeSecondDelay.cancel()
+
                         }
                         else {
                             println("카페 운영은 오전 9시부터 오후 6시까지 운영합니다. 현재 운영시간이 아니므로 주문이 불가능합니다.")
