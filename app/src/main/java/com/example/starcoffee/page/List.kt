@@ -15,11 +15,11 @@ import com.example.starcoffee.drink.LemonAde
 import com.example.starcoffee.drink.LimeAde
 import com.example.starcoffee.drink.MBBlended
 import com.example.starcoffee.drink.Macchiato
-import com.example.starcoffee.drink.NonCoffee
+import com.example.starcoffee.drink.Blended
 import com.example.starcoffee.drink.SDYBlended
-import com.example.starcoffee.drink.SPLatte
+import com.example.starcoffee.drink.RedPowerSmashBlended
 import com.example.starcoffee.drink.YujaAde
-import com.example.starcoffee.drink.chocoLatte
+import com.example.starcoffee.drink.MintChocoChipBlended
 import com.example.starcoffee.food.ApplePie
 import com.example.starcoffee.food.BELTSandwich
 import com.example.starcoffee.food.Bagel
@@ -83,10 +83,10 @@ val frappuccino3 = EspressoFrappuccino()
 val frappuccino4 = JejuBlackCreamFrappuccino()
 var frappuccinoList = mutableListOf(frappuccino1,frappuccino2,frappuccino3,frappuccino4)
 
-val noncoffee0 = NonCoffee()
-val noncoffee1 = chocoLatte()
+val noncoffee0 = Blended()
+val noncoffee1 = MintChocoChipBlended()
 val noncoffee2 = MBBlended()
-val noncoffee3 = SPLatte()
+val noncoffee3 = RedPowerSmashBlended()
 val noncoffee4 = SDYBlended()
 var noncoffeeList = mutableListOf(noncoffee1,noncoffee2,noncoffee3,noncoffee4)
 
