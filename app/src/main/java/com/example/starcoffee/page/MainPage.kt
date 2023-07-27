@@ -2,6 +2,10 @@ package com.example.starcoffee.page
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import com.example.starcoffee.ANSI_BLACK
+import com.example.starcoffee.ANSI_GREEN_BACKGROUND
+import com.example.starcoffee.ANSI_Light_GREEN_BACKGROUND
+import com.example.starcoffee.ANSI_RESET
 
 class MainPage() {
 
@@ -22,9 +26,9 @@ class MainPage() {
 
         while (true) {
 
-            println("★★★★★★★★★★★★★★★★★")
-            println("STARCOFFEE 에 오신걸 환영합니다.")
-            println("★★★★★★★★★★★★★★★★★")
+            println(ANSI_GREEN_BACKGROUND+"★★★★★★★★★★★★★★★★★ " + ANSI_RESET)
+            println(ANSI_GREEN_BACKGROUND +ANSI_BLACK+"STARCOFFEE 에 오신걸 환영합니다."+ANSI_RESET)
+            println(ANSI_GREEN_BACKGROUND+"★★★★★★★★★★★★★★★★★ " + ANSI_RESET)
             println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.")
             println("[ STARCOFFEE MENU ]")
             println("1. Drink            ｜")
