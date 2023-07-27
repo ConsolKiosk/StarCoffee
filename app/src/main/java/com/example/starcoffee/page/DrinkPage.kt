@@ -37,11 +37,11 @@ class DrinkPage() {
             when(drinkNum) {
                 in 1..4 -> {
                     lateinit var updateSizePrice: Pair<String, Double>
-                    if(k==1 || k==2) { //coffee, nonCoffee인 경우 (Ice/Hot 선택 가능)
-                        updateSizePrice = chooseDrinkSize(choiceDrinkList[k][drinkNum-1].name,choiceDrinkList[k][drinkNum-1].price)
-                    } else { //k==3 || k==4 //frappuccino, ade인 경우 (Only Ice만 선택 가능)
+                    if(k==0 || k==1) { //coffee, nonCoffee인 경우 (Ice/Hot 선택 가능)
                         var chooseIceName:String = iceOrHot(choiceDrinkList[k][drinkNum-1].name)
                         updateSizePrice = chooseDrinkSize(chooseIceName,choiceDrinkList[k][drinkNum-1].price)
+                    } else { //k==2 || k==3 //frappuccino, ade인 경우 (Only Ice만 선택 가능)
+                        updateSizePrice = chooseDrinkSize(choiceDrinkList[k][drinkNum-1].name,choiceDrinkList[k][drinkNum-1].price)
                     }
                     var chooseSize = updateSizePrice.first
                     var sizePrice = updateSizePrice.second
@@ -78,9 +78,10 @@ class DrinkPage() {
         println("1. Tall")
         println("2. Grande")
         println("3. Venti")
-        val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
+
         while(true)
         {
+            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
             if(commandNumber == 1){
                 println("Tall 사이즈를 선택하셨습니다.")
                 sizeName = name.trimEnd() + "_Tall_Size" //name 변수 재지정
@@ -97,6 +98,7 @@ class DrinkPage() {
                 break
             }else{
                 println("잘못된 값을 입력하셨습니다.")
+
             }
         }
         return Pair(sizeName, optionPrice)

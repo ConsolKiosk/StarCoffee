@@ -2,6 +2,7 @@ package com.example.starcoffee.page
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import com.example.starcoffee.Test_Coroutine
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -59,21 +60,17 @@ class OrderPage {
                             mainPage.changeCustomer(++setCustomer)
 
                             orderLists.clear()
-                            var threeSecondDelay = CoroutineScope(Dispatchers.Default).launch{
-                                delay(3000)
+                            val corutine = Test_Coroutine()
+                            corutine.orderComplete()
 
-                            }
-                            runBlocking {
-                                threeSecondDelay.join()
-                            }
-                            threeSecondDelay.cancel()
+
 
                         }
                         else {
                             println("카페 운영은 오전 9시부터 오후 6시까지 운영합니다. 현재 운영시간이 아니므로 주문이 불가능합니다.")
                             mainPage.changeCustomer(0)
                             orderLists.clear()
-                            break
+//                            break
                         }
 
                     } else { //잔액 부족

@@ -14,12 +14,24 @@ class Test_Coroutine {
 
                 delay(5000)
                 var customer = customers
+                print("")
                 println("")
                 println(ANSI_GREEN_BACKGROUND +ANSI_BLACK+ "현재 주문 대기수 (${customer}개)" + ANSI_RESET)
                 println("")
 
             }
         }
-
     }
+    fun orderComplete(){
+        val orderCompleting = GlobalScope.launch {
+            delay(3000)
+            println("")
+            println("")
+            println("")
+            println("")
+        }
+        runBlocking {orderCompleting.join()}
+    }
+
+
 }
