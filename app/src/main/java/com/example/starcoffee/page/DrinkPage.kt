@@ -37,7 +37,7 @@ class DrinkPage() {
             when(drinkNum) {
                 in 1..4 -> {
                     lateinit var updateSizePrice: Pair<String, Double>
-                    if(k==0 || k==1) { //coffee, nonCoffee인 경우 (Ice/Hot 선택 가능)
+                    if(k==0) { //coffee, nonCoffee인 경우 (Ice/Hot 선택 가능)
                         var chooseIceName:String = iceOrHot(choiceDrinkList[k][drinkNum-1].name)
                         updateSizePrice = chooseDrinkSize(chooseIceName,choiceDrinkList[k][drinkNum-1].price)
                     } else { //k==2 || k==3 //frappuccino, ade인 경우 (Only Ice만 선택 가능)
