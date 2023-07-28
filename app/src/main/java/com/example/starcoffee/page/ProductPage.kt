@@ -1,6 +1,9 @@
 package com.example.starcoffee.page
 
+import com.example.starcoffee.Test_Coroutine
+
 class ProductPage {
+    val controlPrint = Test_Coroutine()
     fun productPage() {
         println("[ MD MENU ]")
         for ((index, i) in mdList.withIndex()) {
@@ -9,7 +12,7 @@ class ProductPage {
         println("0. 뒤로 가기")
         println("아래 카테고리를 골라 입력해주세요")
         while (true) {
-            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
+            val commandNumber = controlPrint.controlPrint()
             when (commandNumber) {
                 in 1..4 -> {
                     mdChoicePage(commandNumber-1)
@@ -30,14 +33,14 @@ class ProductPage {
         println("0. 뒤로 가기")
         println("아래 항목을 골라 입력해주세요")
         while(true) {
-            val mdNum = readLine()?.trim()?.toIntOrNull() ?: 999
+            val mdNum = controlPrint.controlPrint()
             when(mdNum) {
                 in 1..4 -> {
                     println("${choiceMdList[k][mdNum - 1].name} | W ${choiceMdList[k][mdNum - 1].price}")
                     println("위 메뉴를 장바구니에 추가하시겠습니까?")
                     while(true) {
                         println("1. 확인, 2. 취소")
-                        var listAddNum = readLine()?.trim()?.toIntOrNull() ?: 999
+                        var listAddNum = controlPrint.controlPrint()
                         when(listAddNum) {
                             1 -> {
                                 println("${choiceMdList[k][mdNum - 1].name} 가 장바구니에 추가되었습니다.")

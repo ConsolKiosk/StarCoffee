@@ -7,10 +7,11 @@ import kotlinx.coroutines.runBlocking
 
 
 @RequiresApi(Build.VERSION_CODES.O)
-fun main() {
+fun main(){
 
-    val corutine =Test_Coroutine()
-    corutine.printOrder()
+
+    val printOrder = Test_Coroutine()
+    printOrder.printOrder()
 
     val mainpage = MainPage()
     mainpage.mainPage()
