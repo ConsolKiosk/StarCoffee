@@ -1,8 +1,10 @@
 package com.example.starcoffee.page
 
+import com.example.starcoffee.Test_Coroutine
 
 
 class DrinkPage() {
+    val controlPrint = Test_Coroutine()
     fun drinkPage() {
 1
         println("[ Drink MENU ]")
@@ -12,7 +14,7 @@ class DrinkPage() {
         println("0. 뒤로 가기")
         println("아래 카테고리를 골라 입력해주세요")
         while (true) {
-            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
+            val commandNumber = controlPrint.controlPrint()
             when (commandNumber) {
                 in 1..4 -> {
                     drinkChoicePage(commandNumber-1)
@@ -33,7 +35,7 @@ class DrinkPage() {
         println("0. 뒤로 가기")
         println("아래 항목을 골라 입력해주세요")
         while(true) {
-            val drinkNum = readLine()?.trim()?.toIntOrNull() ?: 999
+            val drinkNum = controlPrint.controlPrint()
             when(drinkNum) {
                 in 1..4 -> {
                     lateinit var updateSizePrice: Pair<String, Double>
@@ -49,7 +51,7 @@ class DrinkPage() {
                     println("위 메뉴를 장바구니에 추가하시겠습니까?")
                     while(true) {
                         println("1. 확인, 2. 취소")
-                        var listAddNum = readLine()?.trim()?.toIntOrNull() ?: 999
+                        var listAddNum = controlPrint.controlPrint()
 
                         when(listAddNum) {
                             1 -> {
@@ -81,7 +83,7 @@ class DrinkPage() {
 
         while(true)
         {
-            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 0
+            val commandNumber = controlPrint.controlPrint()
             if(commandNumber == 1){
                 println("Tall 사이즈를 선택하셨습니다.")
                 sizeName = name.trimEnd() + "_Tall_Size" //name 변수 재지정
@@ -111,7 +113,7 @@ class DrinkPage() {
         println("2. Hot")
 
         while (true) {
-            var inputnum1 = readLine()?.trim()?.toIntOrNull() ?: 0//사용자 Input 받음
+            var inputnum1 = controlPrint.controlPrint()//사용자 Input 받음
             if (inputnum1 == 1) { //아이스 선택시
                 input = "Ice_" + name.trim() // 이름 변수 앞 아이스 추가
                 break

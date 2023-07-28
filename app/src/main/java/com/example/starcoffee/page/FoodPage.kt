@@ -1,6 +1,9 @@
 package com.example.starcoffee.page
 
+import com.example.starcoffee.Test_Coroutine
+
 class FoodPage {
+    val controlPrint = Test_Coroutine()
     fun foodPage() {
         println("[ Food MENU ]")
         for ((index, i) in foodList.withIndex()) {
@@ -9,7 +12,7 @@ class FoodPage {
         println("0. 뒤로 가기")
         println("아래 카테고리를 골라 입력해주세요")
         while (true) {
-            val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
+            val commandNumber = controlPrint.controlPrint()
             when (commandNumber) {
                 in 1..3 -> {
                     foodChoicePage(commandNumber-1)
@@ -30,7 +33,7 @@ class FoodPage {
         println("0. 뒤로 가기")
         println("아래 항목을 골라 입력해주세요")
         while(true) {
-            val foodNum = readLine()?.trim()?.toIntOrNull() ?: 999
+            val foodNum = controlPrint.controlPrint()
             when(foodNum) {
                 in 1..4 -> {
                     println("${choiceFoodList[k][foodNum - 1].name} | W ${choiceFoodList[k][foodNum - 1].price}")

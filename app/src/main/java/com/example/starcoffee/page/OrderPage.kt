@@ -12,7 +12,7 @@ import java.time.LocalTime
 
 
 class OrderPage {
-
+    val controlPrint = Test_Coroutine()
     @RequiresApi(Build.VERSION_CODES.O)
 
     fun orderPage(customers: Int) {
@@ -42,7 +42,7 @@ class OrderPage {
 
         while(true) {
             println("1. 주문, 2. 메뉴판")
-            val orderNum = readLine()?.trim()?.toIntOrNull() ?: 999
+            val orderNum = controlPrint.controlPrint()
             when(orderNum) {
                 1 -> {
                     if(balanceAmount >= totalOrder) {

@@ -1,13 +1,18 @@
 package com.example.starcoffee.page
 
+
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.starcoffee.ANSI_BLACK
 import com.example.starcoffee.ANSI_GREEN_BACKGROUND
 import com.example.starcoffee.ANSI_Light_GREEN_BACKGROUND
 import com.example.starcoffee.ANSI_RESET
+import com.example.starcoffee.Test_Coroutine
+import java.io.OutputStream
+import java.io.PrintStream
 
 class MainPage() {
+    val controlPrint = Test_Coroutine()
 
 
 
@@ -38,7 +43,10 @@ class MainPage() {
                 println("0. Order            | 장바구니 확인 후 주문")
             }
             println("아래 메뉴를 골라 입력해주세요")
+
+
             val commandNumber = readLine()?.trim()?.toIntOrNull() ?: 999
+
             when (commandNumber) {
                 1 -> turnDrinkpage.drinkPage()
                 2 -> turnFoodpage.foodPage()
